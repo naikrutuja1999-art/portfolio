@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rutuja Naik - Cloud Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: #0077ff;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rutuja Naik</h1>
+        <p><strong>AWS Cloud Engineer</strong></p>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am an AWS Cloud Engineer skilled in designing, deploying, and managing cloud environments using 
+                services like EC2, S3, RDS, IAM, VPC, Lambda, and CloudFront. I also have working knowledge of Azure.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <p>
+                <span class="badge">AWS</span>
+                <span class="badge">EC2</span>
+                <span class="badge">S3</span>
+                <span class="badge">IAM</span>
+                <span class="badge">VPC</span>
+                <span class="badge">Lambda</span>
+                <span class="badge">CloudFront</span>
+                <span class="badge">Terraform</span>
+                <span class="badge">CloudFormation</span>
+                <span class="badge">Azure Basics</span>
+                <span class="badge">Linux</span>
+                <span class="badge">Networking</span>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: rutujanaik1000@gmail.com</p>
+            <p>Location: Pune, India</p>
+        </div>
+
+        <footer>
+            Visitor Count: <span id="visitor-count">loading...</span>
+        </footer>
+    </div>
+
+    <script>
+        async function loadVisitorCount() {
+            try {
+                const response = await fetch("YOUR_API_GATEWAY_URL");
+                const data = await response.json();
+                document.getElementById("visitor-count").textContent = data.count;
+            } catch (error) {
+                document.getElementById("visitor-count").textContent = "N/A";
+            }
+        }
+        loadVisitorCount();
+    </script>
+</body>
+</html>
